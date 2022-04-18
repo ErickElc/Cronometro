@@ -1,0 +1,105 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Helvetica, sans-serif;
+
+}
+body{
+    background-color: rgb(64, 74, 83);
+}
+main{
+    border-radius: 10px;
+    background-color: white;
+    position: absolute;
+    top: 20%;
+    left: 28%;
+    width: 50%;
+    height: 500px;
+    list-style-type: none;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+.title-cronometro{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-end;
+    margin-bottom:150px;
+    
+}
+#Cronometro{
+    background-color: lightgray;
+    padding-left: 5px;
+}
+.Container-list{
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    align-items:stretch;
+    justify-content: center;
+}
+
+.Botaos{
+    background-color: blue;
+    padding: 15px;
+    border-radius: 10px;
+    color: white ;
+    border: 0px;
+    margin: 8px;
+    position: relative;
+    
+}
+.Botaos:hover{
+    background-color: rgb(0, 0, 68);
+}
+@media (min-width:1422px) {
+    main{
+        border-radius: 10px;
+        background-color: white;
+        position: absolute;
+        top: 20%;
+        left: 28%;
+        width: 711px;
+        height: 500px;
+        list-style-type: none;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .title-cronometro{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: flex-end;
+        margin-bottom:150px;
+        
+    }
+    #Cronometro{
+        background-color: lightgray;
+        padding-left: 5px;
+    }
+    .Container-list{
+        list-style-type: none;
+        display: flex;
+        flex-flow: row wrap;
+        align-items:stretch;
+        justify-content: center;
+    }
+    
+    .Botaos{
+        background-color: blue;
+        padding: 15px;
+        border-radius: 10px;
+        color: white ;
+        border: 0px;
+        margin: 8px;
+        position: relative;
+        
+    }
+    .Botaos:hover{
+        background-color: rgb(0, 0, 68);
+    }
+}
