@@ -22,7 +22,7 @@ function start(){
         ContadorStart = 0;
         
     }
-    console.log("Contador Start está:" + ContadorStart)
+    
 }
 function pause(){
     ContadorPause += 1;
@@ -38,14 +38,11 @@ function pause(){
             cronometro = setInterval(()=>{timer();},10);
             ContadorPause = 0;
         }
-        
-        console.log("Posso o start está : " + ContadorStart);
     }
     else{
         ContadorPause -= 1;
-        console.log("Não Posso o start está : " + ContadorStart);
     }
-    // ContadorPause -= 1;
+    
 }
 function stop(){
     ContadorStart = 0;
