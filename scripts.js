@@ -8,8 +8,10 @@ let ContadorStart = 0;
 let ContadorPause = 0;
 function start(){
     ContadorStart += 1;
+    // console.log(ContadorStart);
     if(ContadorStart == 1) {
         cronometro = setInterval(()=>{timer();},10);
+        
         
     }
     else{
@@ -20,17 +22,15 @@ function start(){
         ms = 0;
         document.getElementById("Cronometro").innerText="00:00:00:00";
         ContadorStart = 0;
-        
+        ContadorPause = 0;
     }
     
 }
 function pause(){
     ContadorPause += 1;
     if(ContadorStart == 1){
-        clearInterval(cronometro);
         if(ContadorPause == 1){
             clearInterval(cronometro);
-            ContadorPause += 1
 
         }
         else{
@@ -38,11 +38,8 @@ function pause(){
             cronometro = setInterval(()=>{timer();},10);
             ContadorPause = 0;
         }
-    }
-    else{
-        ContadorPause -= 1;
-    }
-    
+    } 
+    console.log(ContadorPause)
 }
 function stop(){
     ContadorStart = 0;
