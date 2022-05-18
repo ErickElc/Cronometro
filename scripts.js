@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 let horas = 0;
 let minutos = 0;
 let segundos = 0;
@@ -8,11 +8,8 @@ let ContadorStart = 0;
 let ContadorPause = 0;
 function start(){
     ContadorStart += 1;
-    // console.log(ContadorStart);
     if(ContadorStart == 1) {
         cronometro = setInterval(()=>{timer();},10);
-        
-        
     }
     else{
         clearInterval(cronometro);
@@ -24,32 +21,32 @@ function start(){
         ContadorStart = 0;
         ContadorPause = 0;
     }
-    
 }
 function pause(){
     ContadorPause += 1;
     if(ContadorStart == 1){
         if(ContadorPause == 1){
             clearInterval(cronometro);
-
         }
-        else{
+        else{ 
             clearInterval(cronometro);
             cronometro = setInterval(()=>{timer();},10);
             ContadorPause = 0;
         }
-    } 
-    console.log(ContadorPause)
+    }
+    else{
+        ContadorPause = 0;
+    }
 }
 function stop(){
-    ContadorStart = 0;
     clearInterval(cronometro);
     horas = 0;
     minutos = 0;
     segundos = 0;
     ms = 0;
     document.getElementById("Cronometro").innerText="00:00:00:00";
-    
+    ContadorPause = 0;
+    ContadorStart = 0;
 }
 function timer(){
     ms++;
@@ -66,9 +63,6 @@ function timer(){
         };
     };
     let TEXTE = (horas < 10 ? '0' + horas : horas) + ':' + (minutos < 10 ? '0' + minutos : minutos) + ':' + (segundos < 10 ? '0' + segundos : segundos) + ':' + (ms < 10 ? '0' + ms : ms);
-
-
     document.getElementById("Cronometro").innerText= TEXTE;
     return TEXTE;
-}
-
+} 
